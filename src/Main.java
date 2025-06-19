@@ -14,14 +14,20 @@ class Box<T> {
     }
 
     public <E> void printContent(E extraInfo) {
-        System.out.println("Content : " + content + ", Extra : " + extraInfo);
+        System.out.println("Content: " + content + ", Extra: " + extraInfo);
     }
 }
 
-
-
 public class Main {
     public static void main(String[] args) {
+        Box<String> stringBox = new Box<>("나는 커서 훌륭한 박스가 될거야!");
 
+        System.out.println(stringBox.getContent());
+
+        stringBox.setContent("실패!");
+
+        System.out.println(stringBox.getContent());
+
+        stringBox.printContent(123);
     }
 }
